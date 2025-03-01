@@ -50,7 +50,7 @@ async def check_updates():
 async def start_command(message: Message):
     await message.answer("Привет! Я бот для уведомлений о новых новостях. /news")
 
-@dp.message(Command("latest"))
+@dp.message(Command("news"))
 async def latest_news(message: Message):
     if LAST_NEWS:
         await message.answer(f"<b>Последняя новость:</b> \n\n{LAST_NEWS}", parse_mode="HTML")
